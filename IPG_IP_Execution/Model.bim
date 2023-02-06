@@ -1,0 +1,2905 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1500,
+  "model": {
+    "culture": "en-US",
+    "dataSources": [
+      {
+        "name": "IBI",
+        "connectionString": "Provider=MSDASQL;Persist Security Info=False;DSN=iBI DaaS",
+        "impersonationMode": "impersonateServiceAccount",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "Others"
+          }
+        ]
+      },
+      {
+        "type": "structured",
+        "name": "AnalysisServices/IPG_iptosoc intel com;IPG_iptosoc",
+        "connectionDetails": {
+          "protocol": "analysis-services",
+          "address": {
+            "server": "IPG_iptosoc.intel.com",
+            "database": "IPG_iptosoc"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "options": {
+          "typedMeasureColumns": true,
+          "implementation": "2.0"
+        },
+        "credential": {
+          "AuthenticationKind": "ServiceAccount",
+          "kind": "AnalysisServices",
+          "path": "ipg_iptosoc.intel.com;IPG_iptosoc"
+        }
+      },
+      {
+        "type": "structured",
+        "name": "AnalysisServices/IPG_Product_Catalog intel com;IPG_Product_Catalog",
+        "connectionDetails": {
+          "protocol": "analysis-services",
+          "address": {
+            "server": "IPG_Product_Catalog.intel.com",
+            "database": "IPG_Product_Catalog"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "options": {
+          "typedMeasureColumns": true,
+          "implementation": "2.0"
+        },
+        "credential": {
+          "AuthenticationKind": "ServiceAccount",
+          "kind": "AnalysisServices",
+          "path": "ipg_product_catalog.intel.com;IPG_Product_Catalog"
+        }
+      },
+      {
+        "type": "structured",
+        "name": "AnalysisServices/ipg_golden_cube intel com;ipg_golden_cube",
+        "connectionDetails": {
+          "protocol": "analysis-services",
+          "address": {
+            "server": "ipg_golden_cube.intel.com",
+            "database": "ipg_golden_cube"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "options": {
+          "typedMeasureColumns": true,
+          "implementation": "2.0"
+        },
+        "credential": {
+          "AuthenticationKind": "ServiceAccount"
+        }
+      },
+      {
+        "type": "structured",
+        "name": "AnalysisServices/ipg_iptosoc intel com;ipg_iptosoc (2)",
+        "connectionDetails": {
+          "protocol": "analysis-services",
+          "address": {
+            "server": "ipg_iptosoc.intel.com",
+            "database": "ipg_iptosoc"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "options": {
+          "typedMeasureColumns": true,
+          "implementation": "2.0"
+        },
+        "credential": {
+          "AuthenticationKind": "ServiceAccount"
+        }
+      },
+      {
+        "type": "structured",
+        "name": "AnalysisServices/ipg_feature intel com;ipg_feature",
+        "connectionDetails": {
+          "protocol": "analysis-services",
+          "address": {
+            "server": "ipg_feature.intel.com",
+            "database": "ipg_feature"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "options": {
+          "typedMeasureColumns": true,
+          "implementation": "2.0"
+        },
+        "credential": {
+          "AuthenticationKind": "ServiceAccount"
+        }
+      },
+      {
+        "type": "structured",
+        "name": "AnalysisServices/IPG_Doc_Tracking intel com;IPG_Doc_Tracking",
+        "connectionDetails": {
+          "protocol": "analysis-services",
+          "address": {
+            "server": "IPG_Doc_Tracking.intel.com",
+            "database": "IPG_Doc_Tracking"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "options": {
+          "typedMeasureColumns": true,
+          "implementation": "2.0"
+        },
+        "credential": {
+          "AuthenticationKind": "ServiceAccount",
+          "kind": "AnalysisServices",
+          "path": "ipg_doc_tracking.intel.com;IPG_Doc_Tracking"
+        }
+      },
+      {
+        "type": "structured",
+        "name": "AnalysisServices/ipg_fwsw intel com;ipg_fwsw",
+        "connectionDetails": {
+          "protocol": "analysis-services",
+          "address": {
+            "server": "ipg_fwsw.intel.com",
+            "database": "ipg_fwsw"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "options": {
+          "typedMeasureColumns": true,
+          "implementation": "2.0"
+        },
+        "credential": {
+          "AuthenticationKind": "ServiceAccount"
+        }
+      },
+      {
+        "type": "structured",
+        "name": "AnalysisServices/SDLIntegrated_hs intel com;SDLIntegrated",
+        "connectionDetails": {
+          "protocol": "analysis-services",
+          "address": {
+            "server": "SDLIntegrated_hs.intel.com",
+            "database": "SDLIntegrated"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "options": {
+          "typedMeasureColumns": true,
+          "implementation": "2.0"
+        },
+        "credential": {
+          "AuthenticationKind": "ServiceAccount",
+          "kind": "AnalysisServices",
+          "path": "sdlintegrated_hs.intel.com;SDLIntegrated"
+        }
+      }
+    ],
+    "tables": [
+      {
+        "name": "V_IPG_CARBON_NESTED_IP",
+        "columns": [
+          {
+            "name": "Depth",
+            "dataType": "int64",
+            "sourceColumn": "Depth",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "TopLevelIpConfigurationId",
+            "dataType": "string",
+            "sourceColumn": "TopLevelIpConfigurationId",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "sortTree",
+            "dataType": "string",
+            "sourceColumn": "sortTree",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "SortTreeName",
+            "dataType": "string",
+            "sourceColumn": "SortTreeName",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "SubIP",
+            "dataType": "string",
+            "sourceColumn": "SubIP",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "IpFamily",
+            "dataType": "string",
+            "sourceColumn": "IpFamily",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "IpType",
+            "dataType": "string",
+            "sourceColumn": "IpType",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Org",
+            "dataType": "string",
+            "sourceColumn": "Org",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Owner",
+            "dataType": "string",
+            "sourceColumn": "Owner",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Vendor",
+            "dataType": "string",
+            "sourceColumn": "Vendor",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "Name",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "section",
+            "dataType": "string",
+            "sourceColumn": "section",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "type": "calculated",
+            "name": "ConfigID",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "V_IPG_CARBON_NESTED_IP[TopLevelIpConfigurationId]"
+          },
+          {
+            "type": "calculated",
+            "name": "ipsections",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "V_IPG_CARBON_NESTED_IP[section]&\"|\"",
+              "&V_IPG_CARBON_NESTED_IP[Name]&\"|\"",
+              "&V_IPG_CARBON_NESTED_IP[Org]&\"|\"",
+              "&V_IPG_CARBON_NESTED_IP[Vendor]&\"|\"",
+              "&V_IPG_CARBON_NESTED_IP[OwnerName]&\"|\"",
+              "&V_IPG_CARBON_NESTED_IP[ConfigID]&\"|\""
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "OwnerName",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "RELATED(QueryWorkerNames[User_Name])"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "V_IPG_CARBON_NESTED_IP",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "select ",
+                "a.Depth,",
+                "a.TopLevelIpConfigurationId,",
+                "a.sortTree,",
+                "a.SortTreeName,",
+                "a.SubIP,",
+                "b.IpFamily,",
+                "b.IpType,",
+                "b.Org,",
+                "b.DevelopmentLead as Owner,",
+                "b.supplier as Vendor,",
+                "b.Name,",
+                "case ",
+                "\twhen IpFamily = 'external_ip' then 'external'",
+                "\twhen IpType = 'vip' then 'verification'",
+                "\telse 'internal'",
+                "end as section",
+                "",
+                "from (",
+                "",
+                "select ",
+                "Depth,",
+                "cast(TopLevelIpConfigurationId as varchar) as TopLevelIpConfigurationId,",
+                "sortTree,",
+                "SortTreeName,",
+                "Substring(a.sortTree, Charindex('---', sortTree)+3, LEN(sortTree)) as SubIP",
+                "from [V_IPG_CARBON_NESTED_IP]",
+                "where Depth = 2",
+                "",
+                ") a",
+                "left join [V_IPG_CARBON_IPCONFIGURATION] b",
+                "on a.SubIP = b.IpConfigurationId"
+              ],
+              "dataSource": "IBI"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select ",
+                  "a.Depth,",
+                  "a.TopLevelIpConfigurationId,",
+                  "a.sortTree,",
+                  "a.SortTreeName,",
+                  "a.SubIP,",
+                  "b.IpFamily,",
+                  "b.IpType,",
+                  "b.Org,",
+                  "b.DevelopmentLead as Owner,",
+                  "b.supplier as Vendor,",
+                  "b.Name,",
+                  "case ",
+                  "\twhen IpFamily = 'external_ip' then 'external'",
+                  "\twhen IpType = 'vip' then 'verification'",
+                  "\telse 'internal'",
+                  "end as section",
+                  "",
+                  "from (",
+                  "",
+                  "select ",
+                  "Depth,",
+                  "cast(TopLevelIpConfigurationId as varchar) as TopLevelIpConfigurationId,",
+                  "sortTree,",
+                  "SortTreeName,",
+                  "Substring(a.sortTree, Charindex('---', sortTree)+3, LEN(sortTree)) as SubIP",
+                  "from [V_IPG_CARBON_NESTED_IP]",
+                  "where Depth = 2",
+                  "",
+                  ") a",
+                  "left join [V_IPG_CARBON_IPCONFIGURATION] b",
+                  "on a.SubIP = b.IpConfigurationId</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "select ",
+              "a.Depth,",
+              "a.TopLevelIpConfigurationId,",
+              "a.sortTree,",
+              "a.SortTreeName,",
+              "a.SubIP,",
+              "b.IpFamily,",
+              "b.IpType,",
+              "b.Org,",
+              "b.DevelopmentLead as Owner,",
+              "b.supplier as Vendor,",
+              "b.Name,",
+              "case ",
+              "\twhen IpFamily = 'external_ip' then 'external'",
+              "\twhen IpType = 'vip' then 'verification'",
+              "\telse 'internal'",
+              "end as section",
+              "",
+              "from (",
+              "",
+              "select ",
+              "Depth,",
+              "cast(TopLevelIpConfigurationId as varchar) as TopLevelIpConfigurationId,",
+              "sortTree,",
+              "SortTreeName,",
+              "Substring(a.sortTree, Charindex('---', sortTree)+3, LEN(sortTree)) as SubIP",
+              "from [V_IPG_CARBON_NESTED_IP]",
+              "where Depth = 2",
+              "",
+              ") a",
+              "left join [V_IPG_CARBON_IPCONFIGURATION] b",
+              "on a.SubIP = b.IpConfigurationId"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "V_IPG_CARBON_NESTED_IP"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select ",
+              "a.Depth,",
+              "a.TopLevelIpConfigurationId,",
+              "a.sortTree,",
+              "a.SortTreeName,",
+              "a.SubIP,",
+              "b.IpFamily,",
+              "b.IpType,",
+              "b.Org,",
+              "b.DevelopmentLead as Owner,",
+              "b.supplier as Vendor,",
+              "b.Name,",
+              "case ",
+              "\twhen IpFamily = 'external_ip' then 'external'",
+              "\twhen IpType = 'vip' then 'verification'",
+              "\telse 'internal'",
+              "end as section",
+              "",
+              "from (",
+              "",
+              "select ",
+              "Depth,",
+              "cast(TopLevelIpConfigurationId as varchar) as TopLevelIpConfigurationId,",
+              "sortTree,",
+              "SortTreeName,",
+              "Substring(a.sortTree, Charindex('---', sortTree)+3, LEN(sortTree)) as SubIP",
+              "from [V_IPG_CARBON_NESTED_IP]",
+              "where Depth = 2",
+              "",
+              ") a",
+              "left join [V_IPG_CARBON_IPCONFIGURATION] b",
+              "on a.SubIP = b.IpConfigurationId</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Contact_Information",
+        "columns": [
+          {
+            "name": "config_gen_fam.Architecture_Lead",
+            "dataType": "string",
+            "sourceColumn": "config_gen_fam.Architecture_Lead"
+          },
+          {
+            "name": "config_gen_fam.Architecture_Lead_Name",
+            "dataType": "string",
+            "sourceColumn": "config_gen_fam.Architecture_Lead_Name"
+          },
+          {
+            "name": "config_gen_fam.Execution_Lead",
+            "dataType": "string",
+            "sourceColumn": "config_gen_fam.Execution_Lead"
+          },
+          {
+            "name": "config_gen_fam.Execution_Lead_Name",
+            "dataType": "string",
+            "sourceColumn": "config_gen_fam.Execution_Lead_Name"
+          },
+          {
+            "name": "config_gen_fam.GM",
+            "dataType": "string",
+            "sourceColumn": "config_gen_fam.GM"
+          },
+          {
+            "name": "config_gen_fam.GM_Name",
+            "dataType": "string",
+            "sourceColumn": "config_gen_fam.GM_Name"
+          },
+          {
+            "name": "config_gen_fam.IPvalidation_Architect_Name",
+            "dataType": "string",
+            "sourceColumn": "config_gen_fam.IPvalidation_Architect_Name"
+          },
+          {
+            "name": "config_gen_fam.Product_Owner",
+            "dataType": "string",
+            "sourceColumn": "config_gen_fam.Product_Owner"
+          },
+          {
+            "name": "config_gen_fam.Product_Owner_Name",
+            "dataType": "string",
+            "sourceColumn": "config_gen_fam.Product_Owner_Name"
+          },
+          {
+            "name": "config_gen_fam.Program_Manager",
+            "dataType": "string",
+            "sourceColumn": "config_gen_fam.Program_Manager"
+          },
+          {
+            "name": "config_gen_fam.Program_Manager_Name",
+            "dataType": "string",
+            "sourceColumn": "config_gen_fam.Program_Manager_Name"
+          },
+          {
+            "name": "config_gen_fam.Support_Lead",
+            "dataType": "string",
+            "sourceColumn": "config_gen_fam.Support_Lead"
+          },
+          {
+            "name": "config_gen_fam.Support_Lead_Name",
+            "dataType": "string",
+            "sourceColumn": "config_gen_fam.Support_Lead_Name"
+          },
+          {
+            "name": "config_gen_fam.Validation_Architect",
+            "dataType": "string",
+            "sourceColumn": "config_gen_fam.Validation_Architect"
+          },
+          {
+            "name": "config_gen_fam.IP_Execution_Lead_Name",
+            "dataType": "string",
+            "sourceColumn": "config_gen_fam.IP_Execution_Lead_Name"
+          },
+          {
+            "name": "configuration",
+            "dataType": "string",
+            "sourceColumn": "config_gen_fam.configuration"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = AnalysisServices.Database(\"IPG_Product_Catalog.intel.com\", \"IPG_Product_Catalog\", [TypedMeasureColumns=true, Implementation=\"2.0\"]),",
+                "    Model1 = Source{[Id=\"Model\"]}[Data],",
+                "    Model2 = Model1{[Id=\"Model\"]}[Data],",
+                "    #\"Added Items\" = Cube.Transform(Model2,",
+                "        {",
+                "            {Cube.AddAndExpandDimensionColumn, \"[config_gen_fam]\", {\"[config_gen_fam].[Architecture_Lead].[Architecture_Lead]\", \"[config_gen_fam].[Architecture_Lead_Name].[Architecture_Lead_Name]\", \"[config_gen_fam].[configuration].[configuration]\", \"[config_gen_fam].[Execution_Lead].[Execution_Lead]\", \"[config_gen_fam].[Execution_Lead_Name].[Execution_Lead_Name]\", \"[config_gen_fam].[GM].[GM]\", \"[config_gen_fam].[GM_Name].[GM_Name]\", \"[config_gen_fam].[IP_Execution_Lead_Name].[IP_Execution_Lead_Name]\", \"[config_gen_fam].[IPvalidation_Architect_Name].[IPvalidation_Architect_Name]\", \"[config_gen_fam].[Product_Owner].[Product_Owner]\", \"[config_gen_fam].[Product_Owner_Name].[Product_Owner_Name]\", \"[config_gen_fam].[Program_Manager].[Program_Manager]\", \"[config_gen_fam].[Program_Manager_Name].[Program_Manager_Name]\", \"[config_gen_fam].[Support_Lead].[Support_Lead]\", \"[config_gen_fam].[Support_Lead_Name].[Support_Lead_Name]\", \"[config_gen_fam].[Validation_Architect].[Validation_Architect]\"}, {\"config_gen_fam.Architecture_Lead\", \"config_gen_fam.Architecture_Lead_Name\", \"config_gen_fam.configuration\", \"config_gen_fam.Execution_Lead\", \"config_gen_fam.Execution_Lead_Name\", \"config_gen_fam.GM\", \"config_gen_fam.GM_Name\", \"config_gen_fam.IP_Execution_Lead_Name\", \"config_gen_fam.IPvalidation_Architect_Name\", \"config_gen_fam.Product_Owner\", \"config_gen_fam.Product_Owner_Name\", \"config_gen_fam.Program_Manager\", \"config_gen_fam.Program_Manager_Name\", \"config_gen_fam.Support_Lead\", \"config_gen_fam.Support_Lead_Name\", \"config_gen_fam.Validation_Architect\"}}",
+                "        }),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Added Items\", each [config_gen_fam.configuration] <> null and [config_gen_fam.configuration] <> \"\"),",
+                "    #\"Removed Duplicates\" = Table.Distinct(#\"Filtered Rows\", {\"config_gen_fam.configuration\"})",
+                "in",
+                "    #\"Removed Duplicates\""
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "AppData",
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "SoC Die",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[SoC Die]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Configuration",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Configuration]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "UniqueKey",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[UniqueKey]"
+          },
+          {
+            "type": "calculated",
+            "name": "Key_Milestone_Dates",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "1"
+          },
+          {
+            "type": "calculated",
+            "name": "Milestones",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "related(QueryIPData[Milestones])"
+          },
+          {
+            "type": "calculated",
+            "name": "Contacts",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "related(QueryIPData[Contacts]) & AppData[SoCContacts]",
+              ""
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "IPFamily",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "related(QueryIPData[IpFamily])"
+          },
+          {
+            "type": "calculated",
+            "name": "IPType",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "Related(QueryIPData[IpType])"
+          },
+          {
+            "type": "calculated",
+            "name": "Generation",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "RELATED(QueryIPData[IpGeneration])"
+          },
+          {
+            "type": "calculated",
+            "name": "ConfigGen",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "AppData[Configuration]&\"|\"&AppData[Generation]"
+          },
+          {
+            "type": "calculated",
+            "name": "ConfigID",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "RELATED(QueryIPData[IpConfigurationId])"
+          },
+          {
+            "type": "calculated",
+            "name": "ipsections",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "RELATED(QueryIPData[ipsections])"
+          },
+          {
+            "type": "calculated",
+            "name": "Links",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "",
+              "AppData[DataSheets] & \"~\" &",
+              "AppData[IP-Concept/IC-Refresh] & \"~\" &",
+              "AppData[TRM]"
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "NonCommitFeature",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "",
+              "var socdie = AppData[SoC Die]",
+              "var ipfam = AppData[IPFamily]",
+              "var config = AppData[Configuration]",
+              "var oldip = AppData[OldIPFamily]",
+              "",
+              "return",
+              "CONCATENATEX(Filter(ipg_feature_new, socdie = ipg_feature_new[QueryFeature.SoC Die] && (ipfam = ipg_feature_new[QueryFeature.Configuration]||config = ipg_feature_new[QueryFeature.Configuration] || oldip = ipg_feature_new[QueryFeature.Configuration])), ipg_feature_new[FeatureOverview], \"~\")"
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "FWSWFeatures",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "",
+              "var fam = AppData[IPFamily]",
+              "var soc = AppData[SoC Die]",
+              "",
+              "return",
+              "CONCATENATEX(Filter(QuerySoCPlatform, fam = QuerySoCPlatform[IPFamily] && soc = QuerySoCPlatform[soc_data.DieName]), QuerySoCPlatform[FWSWFeatures] , \"~\")"
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "OldIPFamily",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "RELATED(QueryIPData[old_IpFamily])"
+          },
+          {
+            "type": "calculated",
+            "name": "DataSheets",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "",
+              "var config = AppData[Configuration]",
+              "var socdie = AppData[SoC Die]",
+              "var ipfam = AppData[OldIPFamily]",
+              "",
+              "return",
+              "CONCATENATEX(Filter(DocLinks, CONTAINSSTRING(DocLinks[Configuration], config) && DocLinks[QueryUnion.doc_type] = \"DataSheet\" && not ISBLANK(config) && not ISBLANK(socdie) && CONTAINSSTRING(DocLinks[IpFamily], ipfam)), DocLinks[QueryUnion.url] & \"<>\" & DocLinks[QueryUnion.doc_type], \"~\")"
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "IC-Refresh",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "",
+              "var config = AppData[Configuration]",
+              "var socdie = AppData[SoC Die]",
+              "var ipfam = AppData[OldIPFamily]",
+              "",
+              "return",
+              "CONCATENATEX(Filter(DocLinks, CONTAINSSTRING(DocLinks[Configuration], config) && DocLinks[QueryUnion.doc_type] = \"IC-Refresh\" && not ISBLANK(config) && not ISBLANK(socdie) && CONTAINSSTRING(DocLinks[UsingReleases], socdie) && CONTAINSSTRING(DocLinks[IpFamily], ipfam)), DocLinks[QueryUnion.url] & \"<>\" & DocLinks[QueryUnion.doc_type], \"~\")"
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "IP-Concept",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "",
+              "var config = AppData[Configuration]",
+              "var socdie = AppData[SoC Die]",
+              "var ipfam = AppData[OldIPFamily]",
+              "",
+              "return",
+              "CONCATENATEX(Filter(DocLinks, CONTAINSSTRING(DocLinks[Configuration], config) && DocLinks[QueryUnion.doc_type] = \"IP-Concept\" && not ISBLANK(config) && not ISBLANK(socdie) && CONTAINSSTRING(DocLinks[IpFamily], ipfam)), DocLinks[QueryUnion.url] & \"<>\" & DocLinks[QueryUnion.doc_type], \"~\")"
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "IP-Concept/IC-Refresh",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": " IF(ISBLANK(AppData[IC-Refresh]), AppData[IP-Concept], AppData[IC-Refresh])"
+          },
+          {
+            "type": "calculated",
+            "name": "TRM",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "",
+              "var config = AppData[Configuration]",
+              "var socdie = AppData[SoC Die]",
+              "var ipfam = AppData[OldIPFamily]",
+              "",
+              "return",
+              "CONCATENATEX(Filter(DocLinks, CONTAINSSTRING(DocLinks[Configuration], config) && DocLinks[QueryUnion.doc_type] = \"TRM\" && not ISBLANK(config) && not ISBLANK(socdie) && CONTAINSSTRING(DocLinks[UsingReleases], socdie) && CONTAINSSTRING(DocLinks[IpFamily], ipfam)), DocLinks[QueryUnion.url] & \"<>\" & DocLinks[QueryUnion.doc_type], \"~\")"
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "SoCContacts",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "IF(ISBLANK(RELATED(QuerySoCContacts[ContactsCombined])), \"||||||||||||\", RELATED(QuerySoCContacts[ContactsCombined]))"
+          },
+          {
+            "type": "calculated",
+            "name": "FWSWConfiguration",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "",
+              "var fam = AppData[IPFamily]",
+              "var soc = AppData[SoC Die]",
+              "",
+              "return",
+              "CONCATENATEX(Filter(QuerySoCPlatform, fam = QuerySoCPlatform[IPFamily] && soc = QuerySoCPlatform[soc_data.DieName]), QuerySoCPlatform[FWSWConfiguration] , \",\")"
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "CM Email",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "CONCATENATEX(QueryCMEmails, QueryCMEmails[CorporateEmailTxt], \"~\")"
+          },
+          {
+            "type": "calculated",
+            "name": "sdlsecurity",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              " ",
+              "var ip = AppData[OldIPFamily]",
+              "var gen = AppData[Generation]",
+              "var config = AppData[Configuration]",
+              "",
+              "return",
+              "CONCATENATEX(Filter(CSDL_SDE_Project, (ip = CSDL_SDE_Project[CSDL_SDE_Project.ApplicationName] || ip & \"_1\" = CSDL_SDE_Project[CSDL_SDE_Project.ApplicationName]) && (gen = CSDL_SDE_Project[CSDL_SDE_Project.ProjectName] || config = CSDL_SDE_Project[CSDL_SDE_Project.ProjectName])), CSDL_SDE_Project[CSDL_SDE_Project.SDLePortalURL] & \"~\" & CSDL_SDE_Project[CSDL_SDE_Project.ProjectType] , \"~\")"
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "ConfigIDCombined",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": " AppData[OldIPFamily] & \"~\" & AppData[ConfigID] & \"~\" & AppData[sdlsecurity] & \"~\" & AppData[FWSWConfiguration]"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "CalculatedTable 1",
+            "source": {
+              "type": "calculated",
+              "expression": [
+                "DISTINCT(SELECTCOLUMNS(QueryIPSoCMapping,",
+                "",
+                "\"SoC Die\", QueryIPSoCMapping[DieName],",
+                "\"Configuration\", QueryIPSoCMapping[configuration],",
+                "\"UniqueKey\", QueryIPSoCMapping[UniqueKey]))"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "refreshtime",
+            "expression": " NOW()"
+          }
+        ]
+      },
+      {
+        "name": "DocLinks",
+        "columns": [
+          {
+            "name": "QueryUnion.active",
+            "dataType": "string",
+            "sourceColumn": "QueryUnion.active"
+          },
+          {
+            "name": "QueryUnion.doc_type",
+            "dataType": "string",
+            "sourceColumn": "QueryUnion.doc_type"
+          },
+          {
+            "name": "QueryUnion.ID",
+            "dataType": "string",
+            "sourceColumn": "QueryUnion.ID"
+          },
+          {
+            "name": "QueryUnion.url",
+            "dataType": "string",
+            "sourceColumn": "QueryUnion.url"
+          },
+          {
+            "name": "QueryUnion.visible",
+            "dataType": "string",
+            "sourceColumn": "QueryUnion.visible"
+          },
+          {
+            "type": "calculated",
+            "name": "Configuration",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "",
+              "var getid = DocLinks[QueryUnion.ID]",
+              "",
+              "return",
+              "CONCATENATEX(Filter(CarbonCombined, getid = CarbonCombined[CarbonCombined.ID] ), CarbonCombined[CarbonCombined.Configuration] , \"~\")"
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "UsingReleases",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "",
+              "var getid = DocLinks[QueryUnion.ID]",
+              "",
+              "return",
+              "CONCATENATEX(Filter(CarbonCombined, getid = CarbonCombined[CarbonCombined.ID] ), CarbonCombined[CarbonCombined.UsingProducts] , \"~\")"
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "IpFamily",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "",
+              "var getid = DocLinks[QueryUnion.ID]",
+              "",
+              "return",
+              "CONCATENATEX(Filter(CarbonCombined, getid = CarbonCombined[CarbonCombined.ID] ), CarbonCombined[CarbonCombined.IpFamily] , \"~\")"
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"AnalysisServices/IPG_Doc_Tracking intel com;IPG_Doc_Tracking\",",
+                "    Model1 = Source{[Id=\"Model\"]}[Data],",
+                "    Model2 = Model1{[Id=\"Model\"]}[Data],",
+                "    #\"Added Items\" = Cube.Transform(Model2,",
+                "        {",
+                "            {Cube.AddAndExpandDimensionColumn, \"[QueryUnion]\", {\"[QueryUnion].[active].[active]\", \"[QueryUnion].[doc_type].[doc_type]\", \"[QueryUnion].[ID].[ID]\", \"[QueryUnion].[url].[url]\", \"[QueryUnion].[visible].[visible]\"}, {\"QueryUnion.active\", \"QueryUnion.doc_type\", \"QueryUnion.ID\", \"QueryUnion.url\", \"QueryUnion.visible\"}}",
+                "        }),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Added Items\", each [QueryUnion.active] = \"1\"),",
+                "    #\"Filtered Rows1\" = Table.SelectRows(#\"Filtered Rows\", each [QueryUnion.visible] = \"1\"),",
+                "    #\"Removed Duplicates\" = Table.Distinct(#\"Filtered Rows1\", {\"QueryUnion.ID\"})",
+                "in",
+                "    #\"Removed Duplicates\""
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "CarbonCombined",
+        "columns": [
+          {
+            "name": "CarbonCombined.Complete",
+            "dataType": "string",
+            "sourceColumn": "CarbonCombined.Complete"
+          },
+          {
+            "name": "CarbonCombined.Configuration",
+            "dataType": "string",
+            "sourceColumn": "CarbonCombined.Configuration"
+          },
+          {
+            "name": "CarbonCombined.DevOrg",
+            "dataType": "string",
+            "sourceColumn": "CarbonCombined.DevOrg"
+          },
+          {
+            "name": "CarbonCombined.Domain",
+            "dataType": "string",
+            "sourceColumn": "CarbonCombined.Domain"
+          },
+          {
+            "name": "CarbonCombined.Drop",
+            "dataType": "string",
+            "sourceColumn": "CarbonCombined.Drop"
+          },
+          {
+            "name": "CarbonCombined.DropType",
+            "dataType": "string",
+            "sourceColumn": "CarbonCombined.DropType"
+          },
+          {
+            "name": "CarbonCombined.Generation",
+            "dataType": "string",
+            "sourceColumn": "CarbonCombined.Generation"
+          },
+          {
+            "name": "CarbonCombined.ID",
+            "dataType": "string",
+            "sourceColumn": "CarbonCombined.ID"
+          },
+          {
+            "name": "CarbonCombined.IDTypeUsed",
+            "dataType": "string",
+            "sourceColumn": "CarbonCombined.IDTypeUsed"
+          },
+          {
+            "name": "CarbonCombined.IpFamily",
+            "dataType": "string",
+            "sourceColumn": "CarbonCombined.IpFamily"
+          },
+          {
+            "name": "CarbonCombined.IpType",
+            "dataType": "string",
+            "sourceColumn": "CarbonCombined.IpType"
+          },
+          {
+            "name": "CarbonCombined.IPXFQN",
+            "dataType": "string",
+            "sourceColumn": "CarbonCombined.IPXFQN"
+          },
+          {
+            "name": "CarbonCombined.LengthSoC",
+            "dataType": "string",
+            "sourceColumn": "CarbonCombined.LengthSoC"
+          },
+          {
+            "name": "CarbonCombined.LengthUsingProducts",
+            "dataType": "string",
+            "sourceColumn": "CarbonCombined.LengthUsingProducts"
+          },
+          {
+            "name": "CarbonCombined.PorYYYYWW",
+            "dataType": "string",
+            "sourceColumn": "CarbonCombined.PorYYYYWW"
+          },
+          {
+            "name": "CarbonCombined.Process",
+            "dataType": "string",
+            "sourceColumn": "CarbonCombined.Process"
+          },
+          {
+            "name": "CarbonCombined.RequestingProducts",
+            "dataType": "string",
+            "sourceColumn": "CarbonCombined.RequestingProducts"
+          },
+          {
+            "name": "CarbonCombined.TrendYYYYWW",
+            "dataType": "string",
+            "sourceColumn": "CarbonCombined.TrendYYYYWW"
+          },
+          {
+            "name": "CarbonCombined.UsingProducts",
+            "dataType": "string",
+            "sourceColumn": "CarbonCombined.UsingProducts"
+          },
+          {
+            "name": "MaxSoC",
+            "dataType": "int64",
+            "sourceColumn": "MaxSoC"
+          },
+          {
+            "name": "MaxUsingProducts",
+            "dataType": "int64",
+            "sourceColumn": "MaxUsingProducts"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"AnalysisServices/IPG_Doc_Tracking intel com;IPG_Doc_Tracking\",",
+                "    Model1 = Source{[Id=\"Model\"]}[Data],",
+                "    Model2 = Model1{[Id=\"Model\"]}[Data],",
+                "    #\"Added Items\" = Cube.Transform(Model2,",
+                "        {",
+                "            {Cube.AddAndExpandDimensionColumn, \"[CarbonCombined]\", {\"[CarbonCombined].[Complete].[Complete]\", \"[CarbonCombined].[Configuration].[Configuration]\", \"[CarbonCombined].[DevOrg].[DevOrg]\", \"[CarbonCombined].[Domain].[Domain]\", \"[CarbonCombined].[Drop].[Drop]\", \"[CarbonCombined].[DropType].[DropType]\", \"[CarbonCombined].[Generation].[Generation]\", \"[CarbonCombined].[ID].[ID]\", \"[CarbonCombined].[IDTypeUsed].[IDTypeUsed]\", \"[CarbonCombined].[IpFamily].[IpFamily]\", \"[CarbonCombined].[IpType].[IpType]\", \"[CarbonCombined].[IPXFQN].[IPXFQN]\", \"[CarbonCombined].[LengthSoC].[LengthSoC]\", \"[CarbonCombined].[LengthUsingProducts].[LengthUsingProducts]\", \"[CarbonCombined].[PorYYYYWW].[PorYYYYWW]\", \"[CarbonCombined].[Process].[Process]\", \"[CarbonCombined].[RequestingProducts].[RequestingProducts]\", \"[CarbonCombined].[TrendYYYYWW].[TrendYYYYWW]\", \"[CarbonCombined].[UsingProducts].[UsingProducts]\"}, {\"CarbonCombined.Complete\", \"CarbonCombined.Configuration\", \"CarbonCombined.DevOrg\", \"CarbonCombined.Domain\", \"CarbonCombined.Drop\", \"CarbonCombined.DropType\", \"CarbonCombined.Generation\", \"CarbonCombined.ID\", \"CarbonCombined.IDTypeUsed\", \"CarbonCombined.IpFamily\", \"CarbonCombined.IpType\", \"CarbonCombined.IPXFQN\", \"CarbonCombined.LengthSoC\", \"CarbonCombined.LengthUsingProducts\", \"CarbonCombined.PorYYYYWW\", \"CarbonCombined.Process\", \"CarbonCombined.RequestingProducts\", \"CarbonCombined.TrendYYYYWW\", \"CarbonCombined.UsingProducts\"}},",
+                "            {Cube.AddMeasureColumn, \"MaxSoC\", \"[Measures].[MaxSoC]\"},",
+                "            {Cube.AddMeasureColumn, \"MaxUsingProducts\", \"[Measures].[MaxUsingProducts]\"}",
+                "        })",
+                "in",
+                "    #\"Added Items\""
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "fwswfeatures",
+        "columns": [
+          {
+            "name": "QueryRCR.Alpha Date",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.Alpha Date"
+          },
+          {
+            "name": "QueryRCR.Alpha YYYYWW",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.Alpha YYYYWW"
+          },
+          {
+            "name": "QueryRCR.AlphaDateTest",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.AlphaDateTest"
+          },
+          {
+            "name": "QueryRCR.AlphaOffset",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.AlphaOffset"
+          },
+          {
+            "name": "QueryRCR.category",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.category"
+          },
+          {
+            "name": "QueryRCR.currentmonth",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.currentmonth"
+          },
+          {
+            "name": "QueryRCR.currentww",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.currentww"
+          },
+          {
+            "name": "QueryRCR.currentyear",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.currentyear"
+          },
+          {
+            "name": "QueryRCR.CustomerLate",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.CustomerLate"
+          },
+          {
+            "name": "QueryRCR.CustomerSeqNbr",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.CustomerSeqNbr"
+          },
+          {
+            "name": "QueryRCR.date",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.date"
+          },
+          {
+            "name": "QueryRCR.DateTest",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.DateTest"
+          },
+          {
+            "name": "QueryRCR.DebugHWLate",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.DebugHWLate"
+          },
+          {
+            "name": "QueryRCR.DebugWASeqNbr",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.DebugWASeqNbr"
+          },
+          {
+            "name": "QueryRCR.DevSubOrg",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.DevSubOrg"
+          },
+          {
+            "name": "QueryRCR.family",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.family"
+          },
+          {
+            "name": "QueryRCR.feature_type",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.feature_type"
+          },
+          {
+            "name": "QueryRCR.HWWALate",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.HWWALate"
+          },
+          {
+            "name": "QueryRCR.HWWASeqNbr",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.HWWASeqNbr"
+          },
+          {
+            "name": "QueryRCR.id",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.id"
+          },
+          {
+            "name": "QueryRCR.InternalLate",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.InternalLate"
+          },
+          {
+            "name": "QueryRCR.InternalSeqNbr",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.InternalSeqNbr"
+          },
+          {
+            "name": "QueryRCR.ip_supplier",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.ip_supplier"
+          },
+          {
+            "name": "QueryRCR.IPFamily",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.IPFamily"
+          },
+          {
+            "name": "QueryRCR.isAlpha",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.isAlpha"
+          },
+          {
+            "name": "QueryRCR.IsCurrentWeek",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.IsCurrentWeek"
+          },
+          {
+            "name": "QueryRCR.isPV",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.isPV"
+          },
+          {
+            "name": "QueryRCR.maxalphaseqnbr",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.maxalphaseqnbr"
+          },
+          {
+            "name": "QueryRCR.MonthOffsetTest",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.MonthOffsetTest"
+          },
+          {
+            "name": "QueryRCR.owner",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.owner"
+          },
+          {
+            "name": "QueryRCR.PrevProject",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.PrevProject"
+          },
+          {
+            "name": "QueryRCR.priority",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.priority"
+          },
+          {
+            "name": "QueryRCR.project",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.project"
+          },
+          {
+            "name": "QueryRCR.PV YYYYWW",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.PV YYYYWW"
+          },
+          {
+            "name": "QueryRCR.PVDateTest",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.PVDateTest"
+          },
+          {
+            "name": "QueryRCR.PVMonthOffset",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.PVMonthOffset"
+          },
+          {
+            "name": "QueryRCR.release",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.release"
+          },
+          {
+            "name": "QueryRCR.SecondPrevProject",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.SecondPrevProject"
+          },
+          {
+            "name": "QueryRCR.status",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.status"
+          },
+          {
+            "name": "QueryRCR.status_reason",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.status_reason"
+          },
+          {
+            "name": "QueryRCR.submitted_date",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.submitted_date"
+          },
+          {
+            "name": "QueryRCR.SubmittedYear",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.SubmittedYear"
+          },
+          {
+            "name": "QueryRCR.tag",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.tag"
+          },
+          {
+            "name": "QueryRCR.tenant",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.tenant"
+          },
+          {
+            "name": "QueryRCR.title",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.title"
+          },
+          {
+            "name": "QueryRCR.url",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.url"
+          },
+          {
+            "name": "QueryRCR.ww",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.ww"
+          },
+          {
+            "name": "QueryRCR.ww_submitted_date",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.ww_submitted_date"
+          },
+          {
+            "name": "QueryRCR.WWSeqNum",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.WWSeqNum"
+          },
+          {
+            "name": "QueryRCR.yyyyww",
+            "dataType": "string",
+            "sourceColumn": "QueryRCR.yyyyww"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"AnalysisServices/ipg_fwsw intel com;ipg_fwsw\",",
+                "    Model1 = Source{[Id=\"Model\"]}[Data],",
+                "    Model2 = Model1{[Id=\"Model\"]}[Data],",
+                "    #\"Added Items\" = Cube.Transform(Model2,",
+                "        {",
+                "            {Cube.AddAndExpandDimensionColumn, \"[QueryRCR]\", {\"[QueryRCR].[Alpha Date].[Alpha Date]\", \"[QueryRCR].[Alpha YYYYWW].[Alpha YYYYWW]\", \"[QueryRCR].[AlphaDateTest].[AlphaDateTest]\", \"[QueryRCR].[AlphaOffset].[AlphaOffset]\", \"[QueryRCR].[category].[category]\", \"[QueryRCR].[currentmonth].[currentmonth]\", \"[QueryRCR].[currentww].[currentww]\", \"[QueryRCR].[currentyear].[currentyear]\", \"[QueryRCR].[CustomerLate].[CustomerLate]\", \"[QueryRCR].[CustomerSeqNbr].[CustomerSeqNbr]\", \"[QueryRCR].[date].[date]\", \"[QueryRCR].[DateTest].[DateTest]\", \"[QueryRCR].[DebugHWLate].[DebugHWLate]\", \"[QueryRCR].[DebugWASeqNbr].[DebugWASeqNbr]\", \"[QueryRCR].[DevSubOrg].[DevSubOrg]\", \"[QueryRCR].[family].[family]\", \"[QueryRCR].[feature_type].[feature_type]\", \"[QueryRCR].[HWWALate].[HWWALate]\", \"[QueryRCR].[HWWASeqNbr].[HWWASeqNbr]\", \"[QueryRCR].[id].[id]\", \"[QueryRCR].[InternalLate].[InternalLate]\", \"[QueryRCR].[InternalSeqNbr].[InternalSeqNbr]\", \"[QueryRCR].[ip_supplier].[ip_supplier]\", \"[QueryRCR].[IPFamily].[IPFamily]\", \"[QueryRCR].[isAlpha].[isAlpha]\", \"[QueryRCR].[IsCurrentWeek].[IsCurrentWeek]\", \"[QueryRCR].[isPV].[isPV]\", \"[QueryRCR].[maxalphaseqnbr].[maxalphaseqnbr]\", \"[QueryRCR].[MonthOffsetTest].[MonthOffsetTest]\", \"[QueryRCR].[owner].[owner]\", \"[QueryRCR].[PrevProject].[PrevProject]\", \"[QueryRCR].[priority].[priority]\", \"[QueryRCR].[project].[project]\", \"[QueryRCR].[PV YYYYWW].[PV YYYYWW]\", \"[QueryRCR].[PVDateTest].[PVDateTest]\", \"[QueryRCR].[PVMonthOffset].[PVMonthOffset]\", \"[QueryRCR].[release].[release]\", \"[QueryRCR].[SecondPrevProject].[SecondPrevProject]\", \"[QueryRCR].[status].[status]\", \"[QueryRCR].[status_reason].[status_reason]\", \"[QueryRCR].[submitted_date].[submitted_date]\", \"[QueryRCR].[SubmittedYear].[SubmittedYear]\", \"[QueryRCR].[tag].[tag]\", \"[QueryRCR].[tenant].[tenant]\", \"[QueryRCR].[title].[title]\", \"[QueryRCR].[url].[url]\", \"[QueryRCR].[ww].[ww]\", \"[QueryRCR].[ww_submitted_date].[ww_submitted_date]\", \"[QueryRCR].[WWSeqNum].[WWSeqNum]\", \"[QueryRCR].[yyyyww].[yyyyww]\"}, {\"QueryRCR.Alpha Date\", \"QueryRCR.Alpha YYYYWW\", \"QueryRCR.AlphaDateTest\", \"QueryRCR.AlphaOffset\", \"QueryRCR.category\", \"QueryRCR.currentmonth\", \"QueryRCR.currentww\", \"QueryRCR.currentyear\", \"QueryRCR.CustomerLate\", \"QueryRCR.CustomerSeqNbr\", \"QueryRCR.date\", \"QueryRCR.DateTest\", \"QueryRCR.DebugHWLate\", \"QueryRCR.DebugWASeqNbr\", \"QueryRCR.DevSubOrg\", \"QueryRCR.family\", \"QueryRCR.feature_type\", \"QueryRCR.HWWALate\", \"QueryRCR.HWWASeqNbr\", \"QueryRCR.id\", \"QueryRCR.InternalLate\", \"QueryRCR.InternalSeqNbr\", \"QueryRCR.ip_supplier\", \"QueryRCR.IPFamily\", \"QueryRCR.isAlpha\", \"QueryRCR.IsCurrentWeek\", \"QueryRCR.isPV\", \"QueryRCR.maxalphaseqnbr\", \"QueryRCR.MonthOffsetTest\", \"QueryRCR.owner\", \"QueryRCR.PrevProject\", \"QueryRCR.priority\", \"QueryRCR.project\", \"QueryRCR.PV YYYYWW\", \"QueryRCR.PVDateTest\", \"QueryRCR.PVMonthOffset\", \"QueryRCR.release\", \"QueryRCR.SecondPrevProject\", \"QueryRCR.status\", \"QueryRCR.status_reason\", \"QueryRCR.submitted_date\", \"QueryRCR.SubmittedYear\", \"QueryRCR.tag\", \"QueryRCR.tenant\", \"QueryRCR.title\", \"QueryRCR.url\", \"QueryRCR.ww\", \"QueryRCR.ww_submitted_date\", \"QueryRCR.WWSeqNum\", \"QueryRCR.yyyyww\"}}",
+                "        })",
+                "in",
+                "    #\"Added Items\""
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "QueryWorkerNames",
+        "columns": [
+          {
+            "name": "User_Name",
+            "dataType": "string",
+            "sourceColumn": "User_Name",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "User_WWID",
+            "dataType": "string",
+            "sourceColumn": "User_WWID",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "User_Idsid",
+            "dataType": "string",
+            "sourceColumn": "User_Idsid",
+            "sourceProviderType": "VarChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "QueryWorkerNames",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "select distinct max([ccMailName]) as [User_Name],max([WWID]) as [User_WWID],[ShortID]as [User_Idsid]",
+                "from [WORKER_PUBLIC]",
+                "where [IsActive] =1",
+                "and [ShortID] is not null",
+                "group by [ShortID]"
+              ],
+              "dataSource": "IBI"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select distinct max([ccMailName]) as [User_Name],max([WWID]) as [User_WWID],[ShortID]as [User_Idsid]",
+                  "from [WORKER_PUBLIC]",
+                  "where [IsActive] =1",
+                  "and [ShortID] is not null",
+                  "group by [ShortID]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "select distinct max([ccMailName]) as [User_Name],max([WWID]) as [User_WWID],[ShortID]as [User_Idsid]",
+              "from [WORKER_PUBLIC]",
+              "where [IsActive] =1",
+              "and [ShortID] is not null",
+              "group by [ShortID]"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "QueryWorkerNames"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select distinct max([ccMailName]) as [User_Name],max([WWID]) as [User_WWID],[ShortID]as [User_Idsid]",
+              "from [WORKER_PUBLIC]",
+              "where [IsActive] =1",
+              "and [ShortID] is not null",
+              "group by [ShortID]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "QuerySoCContacts",
+        "columns": [
+          {
+            "name": "ibi_bulk_id",
+            "dataType": "int64",
+            "sourceColumn": "ibi_bulk_id",
+            "sourceProviderType": "BigInt"
+          },
+          {
+            "name": "ibi_row_id",
+            "dataType": "int64",
+            "sourceColumn": "ibi_row_id",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ibi_ins_dtm",
+            "dataType": "dateTime",
+            "sourceColumn": "ibi_ins_dtm",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          },
+          {
+            "name": "ibi_updt_dtm",
+            "dataType": "dateTime",
+            "sourceColumn": "ibi_updt_dtm",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          },
+          {
+            "name": "Soc",
+            "dataType": "string",
+            "sourceColumn": "Soc",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Acronym",
+            "dataType": "string",
+            "sourceColumn": "Acronym",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "TI",
+            "dataType": "int64",
+            "sourceColumn": "TI",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Anchor Product",
+            "dataType": "string",
+            "sourceColumn": "Anchor Product",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Engineering Team",
+            "dataType": "string",
+            "sourceColumn": "Engineering Team",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Business Unit",
+            "dataType": "string",
+            "sourceColumn": "Business Unit",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Customer Manager",
+            "dataType": "string",
+            "sourceColumn": "Customer Manager",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "PLC Stage",
+            "dataType": "string",
+            "sourceColumn": "PLC Stage",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Contract Status",
+            "dataType": "string",
+            "sourceColumn": "Contract Status",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Contract Start ",
+            "dataType": "string",
+            "sourceColumn": "Contract Start ",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Contract POR",
+            "dataType": "string",
+            "sourceColumn": "Contract POR",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Contract Trend",
+            "dataType": "string",
+            "sourceColumn": "Contract Trend",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Status",
+            "dataType": "string",
+            "sourceColumn": "Status",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Escalation",
+            "dataType": "string",
+            "sourceColumn": "Escalation",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Trend",
+            "dataType": "string",
+            "sourceColumn": "Trend",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Top issues",
+            "dataType": "string",
+            "sourceColumn": "Top issues",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "SoC Feedback",
+            "dataType": "string",
+            "sourceColumn": "SoC Feedback",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "WW",
+            "dataType": "int64",
+            "sourceColumn": "WW",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Sampletime",
+            "dataType": "dateTime",
+            "sourceColumn": "Sampletime",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          },
+          {
+            "name": "Lead Architect",
+            "dataType": "string",
+            "sourceColumn": "Lead Architect",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Lead uArchitect",
+            "dataType": "string",
+            "sourceColumn": "Lead uArchitect",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "FC Int/Val Lead",
+            "dataType": "string",
+            "sourceColumn": "FC Int/Val Lead",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Val Arch",
+            "dataType": "string",
+            "sourceColumn": "Val Arch",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "SD Lead",
+            "dataType": "string",
+            "sourceColumn": "SD Lead",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "DFx Lead",
+            "dataType": "string",
+            "sourceColumn": "DFx Lead",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Power Lead",
+            "dataType": "string",
+            "sourceColumn": "Power Lead",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Circuit Lead",
+            "dataType": "string",
+            "sourceColumn": "Circuit Lead",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "SA/Emulation Lead",
+            "dataType": "string",
+            "sourceColumn": "SA/Emulation Lead",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Design Manager",
+            "dataType": "string",
+            "sourceColumn": "Design Manager",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Mission Control Lead",
+            "dataType": "string",
+            "sourceColumn": "Mission Control Lead",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "IP Office Lead",
+            "dataType": "string",
+            "sourceColumn": "IP Office Lead",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "type": "calculated",
+            "name": "ContactsCombined",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "QuerySoCContacts[Design Manager] & \"|\" &",
+              "QuerySoCContacts[IP Office Lead] & \"|\" &",
+              "QuerySoCContacts[Lead Architect] & \"|\" &",
+              "QuerySoCContacts[Lead uArchitect] & \"|\" &",
+              "QuerySoCContacts[FC Int/Val Lead] & \"|\" &",
+              "QuerySoCContacts[Val Arch] & \"|\" &",
+              "QuerySoCContacts[SD Lead] & \"|\" &",
+              "QuerySoCContacts[DFx Lead] & \"|\" &",
+              "QuerySoCContacts[Power Lead] & \"|\" &",
+              "QuerySoCContacts[Circuit Lead] & \"|\" &",
+              "QuerySoCContacts[SA/Emulation Lead] & \"|\" &",
+              "QuerySoCContacts[Mission Control Lead] & \"|\" "
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "SoCContacts Query",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "select * ",
+                "from [V_BM_IPG_CUSTOMER_MANAGEMENT_WEEKLY_SNAPSHOT]",
+                "where ww = datepart(ww, getutcdate())"
+              ],
+              "dataSource": "IBI"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select * ",
+                  "from [V_BM_IPG_CUSTOMER_MANAGEMENT_WEEKLY_SNAPSHOT]",
+                  "where ww = datepart(ww, getutcdate())</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "select * ",
+              "from [V_BM_IPG_CUSTOMER_MANAGEMENT_WEEKLY_SNAPSHOT]",
+              "where ww = datepart(ww, getutcdate())"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "SoCContacts Query"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select * ",
+              "from [V_BM_IPG_CUSTOMER_MANAGEMENT_WEEKLY_SNAPSHOT]",
+              "where ww = datepart(ww, getutcdate())</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "QueryConfigPlatformName",
+        "columns": [
+          {
+            "name": "configuration_name",
+            "dataType": "string",
+            "sourceColumn": "configuration_name",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "ipfamily",
+            "dataType": "string",
+            "sourceColumn": "ipfamily",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "platform_name",
+            "dataType": "string",
+            "sourceColumn": "platform_name",
+            "sourceProviderType": "VarChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "QueryConfigPlatformName",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "select distinct a.configuration_name",
+                ",CASE WHEN ipfamily = 'cavs fwsw' THEN 'ACE' ELSE ipfamily END as ipfamily",
+                ",a. platform_name from ip_config_milestone_date_mdm a",
+                "join v_ipg_carbon_milestone b",
+                "on a.configuration_name = b.configuration",
+                "where 1=1",
+                "and ipfamily in ('cavs fwsw', 'ISH')"
+              ],
+              "dataSource": "IBI"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select distinct a.configuration_name",
+                  ",CASE WHEN ipfamily = 'cavs fwsw' THEN 'ACE' ELSE ipfamily END as ipfamily",
+                  ",a. platform_name from ip_config_milestone_date_mdm a",
+                  "join v_ipg_carbon_milestone b",
+                  "on a.configuration_name = b.configuration",
+                  "where 1=1",
+                  "and ipfamily in ('cavs fwsw', 'ISH')</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "select distinct a.configuration_name",
+              ",CASE WHEN ipfamily = 'cavs fwsw' THEN 'ACE' ELSE ipfamily END as ipfamily",
+              ",a. platform_name from ip_config_milestone_date_mdm a",
+              "join v_ipg_carbon_milestone b",
+              "on a.configuration_name = b.configuration",
+              "where 1=1",
+              "and ipfamily in ('cavs fwsw', 'ISH')"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "QueryConfigPlatformName"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select distinct a.configuration_name",
+              ",CASE WHEN ipfamily = 'cavs fwsw' THEN 'ACE' ELSE ipfamily END as ipfamily",
+              ",a. platform_name from ip_config_milestone_date_mdm a",
+              "join v_ipg_carbon_milestone b",
+              "on a.configuration_name = b.configuration",
+              "where 1=1",
+              "and ipfamily in ('cavs fwsw', 'ISH')</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "QuerySoCPlatform",
+        "columns": [
+          {
+            "name": "soc_data.DieName",
+            "dataType": "string",
+            "sourceColumn": "soc_data.DieName"
+          },
+          {
+            "name": "soc_data.SecondLvlPlatformConfigNm",
+            "dataType": "string",
+            "sourceColumn": "soc_data.SecondLvlPlatformConfigNm"
+          },
+          {
+            "type": "calculated",
+            "name": "IPFamily",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "RELATED(QueryConfigPlatformName[ipfamily])"
+          },
+          {
+            "type": "calculated",
+            "name": "FWSWConfiguration",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "RELATED(QueryConfigPlatformName[configuration_name])"
+          },
+          {
+            "type": "calculated",
+            "name": "FWSWFeatures",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "",
+              "var ipfam = If(QuerySoCPlatform[IPFamily] = \"ACE\", \"cavs fwsw\", QuerySoCPlatform[IPFamily])",
+              "var config = QuerySoCPlatform[FWSWConfiguration]",
+              "",
+              "return",
+              "CONCATENATEX(Filter(fwswfeatures, ipfam = fwswfeatures[QueryRCR.family] && config = fwswfeatures[QueryRCR.release]), fwswfeatures[QueryRCR.title] & \"|\" & fwswfeatures[QueryRCR.id] & \"|\" & fwswfeatures[QueryRCR.feature_type] & \"|\" & fwswfeatures[QueryRCR.status] & \"|\" & fwswfeatures[QueryRCR.owner] , \"~\")"
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"AnalysisServices/IPG_iptosoc intel com;IPG_iptosoc\",",
+                "    Model1 = Source{[Id=\"Model\"]}[Data],",
+                "    Model2 = Model1{[Id=\"Model\"]}[Data],",
+                "    #\"Added Items\" = Cube.Transform(Model2,",
+                "        {",
+                "            {Cube.AddAndExpandDimensionColumn, \"[soc_data]\", {\"[soc_data].[DieName].[DieName]\", \"[soc_data].[SecondLvlPlatformConfigNm].[SecondLvlPlatformConfigNm]\"}, {\"soc_data.DieName\", \"soc_data.SecondLvlPlatformConfigNm\"}}",
+                "        }),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Added Items\", each [soc_data.SecondLvlPlatformConfigNm] <> null and [soc_data.SecondLvlPlatformConfigNm] <> \"\")",
+                "in",
+                "    #\"Filtered Rows\""
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "QueryCMEmails",
+        "columns": [
+          {
+            "name": "customer manager",
+            "dataType": "string",
+            "sourceColumn": "customer manager",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "CorporateEmailTxt",
+            "dataType": "string",
+            "sourceColumn": "CorporateEmailTxt",
+            "sourceProviderType": "VarChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "QueryCMEmails",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "select distinct ",
+                "[customer manager]",
+                ",case ",
+                "\twhen [CorporateEmailTxt] = 'james.song@intel.com' then  'james1.song@intel.com'",
+                "\telse [CorporateEmailTxt]",
+                "end as [CorporateEmailTxt]",
+                "from ",
+                "(select distinct",
+                "case",
+                "\twhen [customer manager] = 'Judith Benen' then 'Judith E Benen'",
+                "\twhen [customer manager] = 'Surender Verma' then 'Surender Singh'",
+                "\twhen [customer manager] = 'Stacy Martin' then 'Stacy Lee Martin'",
+                "\telse [customer manager]",
+                "end as [customer manager] ",
+                "from",
+                "V_BM_IPG_CUSTOMER_MANAGEMENT_WEEKLY_SNAPSHOT) CM",
+                "left join",
+                "worker_public on [customer manager] = [LegalFullNm]",
+                "where [customer manager] is not null and [customer manager] <> ''",
+                "and [IsActive] =1"
+              ],
+              "dataSource": "IBI"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select distinct ",
+                  "[customer manager]",
+                  ",case ",
+                  "\twhen [CorporateEmailTxt] = 'james.song@intel.com' then  'james1.song@intel.com'",
+                  "\telse [CorporateEmailTxt]",
+                  "end as [CorporateEmailTxt]",
+                  "from ",
+                  "(select distinct",
+                  "case",
+                  "\twhen [customer manager] = 'Judith Benen' then 'Judith E Benen'",
+                  "\twhen [customer manager] = 'Surender Verma' then 'Surender Singh'",
+                  "\twhen [customer manager] = 'Stacy Martin' then 'Stacy Lee Martin'",
+                  "\telse [customer manager]",
+                  "end as [customer manager] ",
+                  "from",
+                  "V_BM_IPG_CUSTOMER_MANAGEMENT_WEEKLY_SNAPSHOT) CM",
+                  "left join",
+                  "worker_public on [customer manager] = [LegalFullNm]",
+                  "where [customer manager] is not null and [customer manager] <> ''",
+                  "and [IsActive] =1</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "select distinct ",
+              "[customer manager]",
+              ",case ",
+              "\twhen [CorporateEmailTxt] = 'james.song@intel.com' then  'james1.song@intel.com'",
+              "\telse [CorporateEmailTxt]",
+              "end as [CorporateEmailTxt]",
+              "from ",
+              "(select distinct",
+              "case",
+              "\twhen [customer manager] = 'Judith Benen' then 'Judith E Benen'",
+              "\twhen [customer manager] = 'Surender Verma' then 'Surender Singh'",
+              "\twhen [customer manager] = 'Stacy Martin' then 'Stacy Lee Martin'",
+              "\telse [customer manager]",
+              "end as [customer manager] ",
+              "from",
+              "V_BM_IPG_CUSTOMER_MANAGEMENT_WEEKLY_SNAPSHOT) CM",
+              "left join",
+              "worker_public on [customer manager] = [LegalFullNm]",
+              "where [customer manager] is not null and [customer manager] <> ''",
+              "and [IsActive] =1"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "QueryCMEmails"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select distinct ",
+              "[customer manager]",
+              ",case ",
+              "\twhen [CorporateEmailTxt] = 'james.song@intel.com' then  'james1.song@intel.com'",
+              "\telse [CorporateEmailTxt]",
+              "end as [CorporateEmailTxt]",
+              "from ",
+              "(select distinct",
+              "case",
+              "\twhen [customer manager] = 'Judith Benen' then 'Judith E Benen'",
+              "\twhen [customer manager] = 'Surender Verma' then 'Surender Singh'",
+              "\twhen [customer manager] = 'Stacy Martin' then 'Stacy Lee Martin'",
+              "\telse [customer manager]",
+              "end as [customer manager] ",
+              "from",
+              "V_BM_IPG_CUSTOMER_MANAGEMENT_WEEKLY_SNAPSHOT) CM",
+              "left join",
+              "worker_public on [customer manager] = [LegalFullNm]",
+              "where [customer manager] is not null and [customer manager] <> ''",
+              "and [IsActive] =1</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "IPtoSOCRefresh",
+        "columns": [
+          {
+            "name": "last_refresh.last_refresh",
+            "dataType": "string",
+            "sourceColumn": "last_refresh.last_refresh"
+          },
+          {
+            "name": "last_refresh.last_refresh_time",
+            "dataType": "string",
+            "sourceColumn": "last_refresh.last_refresh_time"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"AnalysisServices/IPG_iptosoc intel com;IPG_iptosoc\",",
+                "    Model1 = Source{[Id=\"Model\"]}[Data],",
+                "    Model2 = Model1{[Id=\"Model\"]}[Data],",
+                "    #\"Added Items\" = Cube.Transform(Model2,",
+                "        {",
+                "            {Cube.AddAndExpandDimensionColumn, \"[last_refresh]\", {\"[last_refresh].[last_refresh].[last_refresh]\", \"[last_refresh].[last_refresh_time].[last_refresh_time]\"}, {\"last_refresh.last_refresh\", \"last_refresh.last_refresh_time\"}}",
+                "        })",
+                "in",
+                "    #\"Added Items\""
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "ipg_feature_new",
+        "columns": [
+          {
+            "name": "QueryFeature.Alpha_Milestone",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.Alpha_Milestone"
+          },
+          {
+            "name": "QueryFeature.Beta_Milestone",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.Beta_Milestone"
+          },
+          {
+            "name": "QueryFeature.Configuration",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.Configuration"
+          },
+          {
+            "name": "QueryFeature.FeatureLiveData",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.FeatureLiveData"
+          },
+          {
+            "name": "QueryFeature.from_id",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.from_id"
+          },
+          {
+            "name": "QueryFeature.hsdes",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.hsdes"
+          },
+          {
+            "name": "QueryFeature.HSDES_Family",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.HSDES_Family"
+          },
+          {
+            "name": "QueryFeature.hsdes_jira_status",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.hsdes_jira_status"
+          },
+          {
+            "name": "QueryFeature.hsdesid_jirakey",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.hsdesid_jirakey"
+          },
+          {
+            "name": "QueryFeature.id",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.id"
+          },
+          {
+            "name": "QueryFeature.ipconfigurationid",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.ipconfigurationid"
+          },
+          {
+            "name": "QueryFeature.IPFamily",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.IPFamily"
+          },
+          {
+            "name": "QueryFeature.owner",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.owner"
+          },
+          {
+            "name": "QueryFeature.Prod_Milestone",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.Prod_Milestone"
+          },
+          {
+            "name": "QueryFeature.reason",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.reason"
+          },
+          {
+            "name": "QueryFeature.reason_detail",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.reason_detail"
+          },
+          {
+            "name": "QueryFeature.siip_category",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.siip_category"
+          },
+          {
+            "name": "QueryFeature.SoC",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.SoC"
+          },
+          {
+            "name": "QueryFeature.SoC Die",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.SoC Die"
+          },
+          {
+            "name": "QueryFeature.status",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.status"
+          },
+          {
+            "name": "QueryFeature.tenant",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.tenant"
+          },
+          {
+            "name": "QueryFeature.title",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.title"
+          },
+          {
+            "name": "QueryFeature.url",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.url"
+          },
+          {
+            "name": "QueryFeature.ww",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.ww"
+          },
+          {
+            "name": "QueryFeature.Alpha_TrendDate",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.Alpha_TrendDate"
+          },
+          {
+            "name": "QueryFeature.Beta_TrendDate",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.Beta_TrendDate"
+          },
+          {
+            "name": "QueryFeature.Prod_TrendDate",
+            "dataType": "string",
+            "sourceColumn": "QueryFeature.Prod_TrendDate"
+          },
+          {
+            "type": "calculated",
+            "name": "Alpha",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "IF(not ISBLANK(ipg_feature_new[QueryFeature.Alpha_TrendDate]), ipg_feature_new[QueryFeature.Alpha_Milestone]&\"-\"&ipg_feature_new[QueryFeature.Alpha_TrendDate], BLANK())"
+          },
+          {
+            "type": "calculated",
+            "name": "Beta",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "IF(not ISBLANK(ipg_feature_new[QueryFeature.Beta_TrendDate]),ipg_feature_new[QueryFeature.Beta_Milestone]&\"-\"&ipg_feature_new[QueryFeature.Beta_TrendDate], BLANK())"
+          },
+          {
+            "type": "calculated",
+            "name": "Prod",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "IF(not ISBLANK(ipg_feature_new[QueryFeature.Prod_TrendDate]), ipg_feature_new[QueryFeature.Prod_Milestone]&\"-\"&ipg_feature_new[QueryFeature.Prod_TrendDate], BLANK())"
+          },
+          {
+            "type": "calculated",
+            "name": "FeatureOverview",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              " ",
+              "var curr_key = ipg_feature_new[UniqueKey]",
+              "var feature_count = CALCULATE(COUNT(ipg_feature_new[QueryFeature.id]), All(ipg_feature_new),  ipg_feature_new[UniqueKey]=curr_key)",
+              "",
+              "return feature_count&\"|\"&[QueryFeature.id]&\"|\"&ipg_feature_new[QueryFeature.title]&\"|\"&ipg_feature_new[QueryFeature.status] &\"|\"& ipg_feature_new[Alpha] &\"|\"& ipg_feature_new[Beta] &\"|\"& ipg_feature_new[Prod] &\"|\"& ipg_feature_new[QueryFeature.owner] &\"|\"& ipg_feature_new[QueryFeature.siip_category] &\"|\"& ipg_feature_new[HSDESNew] &\"|\"& ipg_feature_new[QueryFeature.hsdesid_jirakey] & \"|\" & ipg_feature_new[QueryFeature.reason_detail]",
+              "",
+              ""
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "UniqueKey",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "ipg_feature_new[QueryFeature.SoC Die]&\"_\"&ipg_feature_new[QueryFeature.Configuration]"
+          },
+          {
+            "type": "calculated",
+            "name": "HSDESNew",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "IF(ipg_feature_new[QueryFeature.tenant] = \"JIRA\" || ipg_feature_new[QueryFeature.tenant] = \"jira\", ipg_feature_new[QueryFeature.hsdes], ipg_feature_new[QueryFeature.from_id])"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = AnalysisServices.Database(\"ipg_feature.intel.com\", \"ipg_feature\", [TypedMeasureColumns=true, Implementation=\"2.0\"]),",
+                "    Model1 = Source{[Id=\"Model\"]}[Data],",
+                "    Model2 = Model1{[Id=\"Model\"]}[Data],",
+                "    #\"Added Items\" = Cube.Transform(Model2,",
+                "        {",
+                "            {Cube.AddAndExpandDimensionColumn, \"[QueryFeature]\", {\"[QueryFeature].[Alpha_Milestone].[Alpha_Milestone]\", \"[QueryFeature].[Alpha_TrendDate].[Alpha_TrendDate]\", \"[QueryFeature].[Beta_Milestone].[Beta_Milestone]\", \"[QueryFeature].[Beta_TrendDate].[Beta_TrendDate]\", \"[QueryFeature].[Configuration].[Configuration]\", \"[QueryFeature].[FeatureLiveData].[FeatureLiveData]\", \"[QueryFeature].[from_id].[from_id]\", \"[QueryFeature].[hsdes].[hsdes]\", \"[QueryFeature].[HSDES_Family].[HSDES_Family]\", \"[QueryFeature].[hsdes_jira_status].[hsdes_jira_status]\", \"[QueryFeature].[hsdesid_jirakey].[hsdesid_jirakey]\", \"[QueryFeature].[id].[id]\", \"[QueryFeature].[ipconfigurationid].[ipconfigurationid]\", \"[QueryFeature].[IPFamily].[IPFamily]\", \"[QueryFeature].[owner].[owner]\", \"[QueryFeature].[Prod_Milestone].[Prod_Milestone]\", \"[QueryFeature].[Prod_TrendDate].[Prod_TrendDate]\", \"[QueryFeature].[reason].[reason]\", \"[QueryFeature].[reason_detail].[reason_detail]\", \"[QueryFeature].[siip_category].[siip_category]\", \"[QueryFeature].[SoC].[SoC]\", \"[QueryFeature].[SoC Die].[SoC Die]\", \"[QueryFeature].[status].[status]\", \"[QueryFeature].[tenant].[tenant]\", \"[QueryFeature].[title].[title]\", \"[QueryFeature].[url].[url]\", \"[QueryFeature].[ww].[ww]\"}, {\"QueryFeature.Alpha_Milestone\", \"QueryFeature.Alpha_TrendDate\", \"QueryFeature.Beta_Milestone\", \"QueryFeature.Beta_TrendDate\", \"QueryFeature.Configuration\", \"QueryFeature.FeatureLiveData\", \"QueryFeature.from_id\", \"QueryFeature.hsdes\", \"QueryFeature.HSDES_Family\", \"QueryFeature.hsdes_jira_status\", \"QueryFeature.hsdesid_jirakey\", \"QueryFeature.id\", \"QueryFeature.ipconfigurationid\", \"QueryFeature.IPFamily\", \"QueryFeature.owner\", \"QueryFeature.Prod_Milestone\", \"QueryFeature.Prod_TrendDate\", \"QueryFeature.reason\", \"QueryFeature.reason_detail\", \"QueryFeature.siip_category\", \"QueryFeature.SoC\", \"QueryFeature.SoC Die\", \"QueryFeature.status\", \"QueryFeature.tenant\", \"QueryFeature.title\", \"QueryFeature.url\", \"QueryFeature.ww\"}}",
+                "        }),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Added Items\", each [QueryFeature.FeatureLiveData] = \"1\")",
+                "in",
+                "    #\"Filtered Rows\""
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "QueryMilestonesNew",
+        "columns": [
+          {
+            "name": "configuration",
+            "dataType": "string",
+            "sourceColumn": "configuration",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "ipconfigurationid",
+            "dataType": "int64",
+            "sourceColumn": "ipconfigurationid",
+            "sourceProviderType": "BigInt"
+          },
+          {
+            "name": "drop",
+            "dataType": "string",
+            "sourceColumn": "drop",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "trendyyyyww",
+            "dataType": "int64",
+            "sourceColumn": "trendyyyyww",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "poryyyyww",
+            "dataType": "int64",
+            "sourceColumn": "poryyyyww",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "usingproducts",
+            "dataType": "string",
+            "sourceColumn": "usingproducts",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "droptype",
+            "dataType": "string",
+            "sourceColumn": "droptype",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "complete",
+            "dataType": "string",
+            "sourceColumn": "complete",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "updatedate",
+            "dataType": "dateTime",
+            "sourceColumn": "updatedate",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          },
+          {
+            "type": "calculated",
+            "name": "MilestoneOverview",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "",
+              "[revision]&\"|\"&[poryyyyww]&\"|\"&[trendyyyyww]&\"|\"&[drop]&\"|\"&[droptype]&\"|\"&[milestoneid]&\"|\"&[usingproducts]"
+            ]
+          },
+          {
+            "name": "revision",
+            "dataType": "string",
+            "sourceColumn": "revision"
+          },
+          {
+            "name": "milestoneid",
+            "dataType": "int64",
+            "sourceColumn": "milestoneid"
+          },
+          {
+            "type": "calculated",
+            "name": "carbon_milestone_link",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "\"https://hsdes.intel.com/appstore/carbon/planning/milestone-plan/\"&[ipconfigurationid]"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "QueryMilestonesNew",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "/*",
+                "select distinct configuration, ipconfigurationid, drop, revision, trendyyyyww, poryyyyww, usingproducts, droptype, complete, updatedate, milestoneid ",
+                "",
+                "from [v_ipg_carbon_milestone] ",
+                "",
+                "where 1=1 ",
+                "",
+                "and devorg = 'IPG' ",
+                "and [Visible] = 'Yes'",
+                "",
+                "and  ",
+                "",
+                "((trendyyyyww is not null and  trendyyyyww  <> '') ",
+                "",
+                "or (poryyyyww is not null and  poryyyyww  <> ''))",
+                "*/",
+                "",
+                "select distinct configuration, ipconfigurationid, drop, revision, trendyyyyww, poryyyyww, usingproducts, droptype, complete, updatedate, milestoneid ",
+                "from [v_ipg_carbon_milestone] ",
+                "where 1=1 ",
+                "and devorg = 'IPG' ",
+                "and [Visible] = 'Yes'",
+                "and  ((trendyyyyww is not null and  trendyyyyww  <> '') or (poryyyyww is not null and  poryyyyww  <> ''))",
+                "and drop <> 'IP Concept (IC)'",
+                "union all",
+                "select distinct configuration, ipconfigurationid, drop, revision, trendyyyyww, poryyyyww, usingproducts, droptype, complete, updatedate, milestoneid ",
+                "from [v_ipg_carbon_milestone] ",
+                "where 1=1 ",
+                "and devorg = 'IPG' ",
+                "and [Visible] = 'Yes'",
+                "and  ((trendyyyyww is not null and  trendyyyyww  <> '') or (poryyyyww is not null and  poryyyyww  <> ''))",
+                "and drop = 'IP Concept (IC)' ",
+                "and ipconfigurationid NOT IN (select distinct ipconfigurationid",
+                "from [v_ipg_carbon_milestone] ",
+                "where 1=1 ",
+                "and devorg = 'IPG' ",
+                "and [Visible] = 'Yes'",
+                "and  ((trendyyyyww is not null and  trendyyyyww  <> '') or (poryyyyww is not null and  poryyyyww  <> ''))",
+                "and drop = 'IP Concept Refresh (ICR)' )"
+              ],
+              "dataSource": "IBI"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>/*",
+                  "select distinct configuration, ipconfigurationid, drop, revision, trendyyyyww, poryyyyww, usingproducts, droptype, complete, updatedate, milestoneid ",
+                  "",
+                  "from [v_ipg_carbon_milestone] ",
+                  "",
+                  "where 1=1 ",
+                  "",
+                  "and devorg = 'IPG' ",
+                  "and [Visible] = 'Yes'",
+                  "",
+                  "and  ",
+                  "",
+                  "((trendyyyyww is not null and  trendyyyyww  <> '') ",
+                  "",
+                  "or (poryyyyww is not null and  poryyyyww  <> ''))",
+                  "*/",
+                  "",
+                  "select distinct configuration, ipconfigurationid, drop, revision, trendyyyyww, poryyyyww, usingproducts, droptype, complete, updatedate, milestoneid ",
+                  "from [v_ipg_carbon_milestone] ",
+                  "where 1=1 ",
+                  "and devorg = 'IPG' ",
+                  "and [Visible] = 'Yes'",
+                  "and  ((trendyyyyww is not null and  trendyyyyww  <> '') or (poryyyyww is not null and  poryyyyww  <> ''))",
+                  "and drop <> 'IP Concept (IC)'",
+                  "union all",
+                  "select distinct configuration, ipconfigurationid, drop, revision, trendyyyyww, poryyyyww, usingproducts, droptype, complete, updatedate, milestoneid ",
+                  "from [v_ipg_carbon_milestone] ",
+                  "where 1=1 ",
+                  "and devorg = 'IPG' ",
+                  "and [Visible] = 'Yes'",
+                  "and  ((trendyyyyww is not null and  trendyyyyww  <> '') or (poryyyyww is not null and  poryyyyww  <> ''))",
+                  "and drop = 'IP Concept (IC)' ",
+                  "and ipconfigurationid NOT IN (select distinct ipconfigurationid",
+                  "from [v_ipg_carbon_milestone] ",
+                  "where 1=1 ",
+                  "and devorg = 'IPG' ",
+                  "and [Visible] = 'Yes'",
+                  "and  ((trendyyyyww is not null and  trendyyyyww  <> '') or (poryyyyww is not null and  poryyyyww  <> ''))",
+                  "and drop = 'IP Concept Refresh (ICR)' )</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "/*",
+              "select distinct configuration, ipconfigurationid, drop, revision, trendyyyyww, poryyyyww, usingproducts, droptype, complete, updatedate, milestoneid ",
+              "",
+              "from [v_ipg_carbon_milestone] ",
+              "",
+              "where 1=1 ",
+              "",
+              "and devorg = 'IPG' ",
+              "and [Visible] = 'Yes'",
+              "",
+              "and  ",
+              "",
+              "((trendyyyyww is not null and  trendyyyyww  <> '') ",
+              "",
+              "or (poryyyyww is not null and  poryyyyww  <> ''))",
+              "*/",
+              "",
+              "select distinct configuration, ipconfigurationid, drop, revision, trendyyyyww, poryyyyww, usingproducts, droptype, complete, updatedate, milestoneid ",
+              "from [v_ipg_carbon_milestone] ",
+              "where 1=1 ",
+              "and devorg = 'IPG' ",
+              "and [Visible] = 'Yes'",
+              "and  ((trendyyyyww is not null and  trendyyyyww  <> '') or (poryyyyww is not null and  poryyyyww  <> ''))",
+              "and drop <> 'IP Concept (IC)'",
+              "union all",
+              "select distinct configuration, ipconfigurationid, drop, revision, trendyyyyww, poryyyyww, usingproducts, droptype, complete, updatedate, milestoneid ",
+              "from [v_ipg_carbon_milestone] ",
+              "where 1=1 ",
+              "and devorg = 'IPG' ",
+              "and [Visible] = 'Yes'",
+              "and  ((trendyyyyww is not null and  trendyyyyww  <> '') or (poryyyyww is not null and  poryyyyww  <> ''))",
+              "and drop = 'IP Concept (IC)' ",
+              "and ipconfigurationid NOT IN (select distinct ipconfigurationid",
+              "from [v_ipg_carbon_milestone] ",
+              "where 1=1 ",
+              "and devorg = 'IPG' ",
+              "and [Visible] = 'Yes'",
+              "and  ((trendyyyyww is not null and  trendyyyyww  <> '') or (poryyyyww is not null and  poryyyyww  <> ''))",
+              "and drop = 'IP Concept Refresh (ICR)' )"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "QueryMilestonesNew"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>/*",
+              "select distinct configuration, ipconfigurationid, drop, revision, trendyyyyww, poryyyyww, usingproducts, droptype, complete, updatedate, milestoneid ",
+              "",
+              "from [v_ipg_carbon_milestone] ",
+              "",
+              "where 1=1 ",
+              "",
+              "and devorg = 'IPG' ",
+              "and [Visible] = 'Yes'",
+              "",
+              "and  ",
+              "",
+              "((trendyyyyww is not null and  trendyyyyww  <> '') ",
+              "",
+              "or (poryyyyww is not null and  poryyyyww  <> ''))",
+              "*/",
+              "",
+              "select distinct configuration, ipconfigurationid, drop, revision, trendyyyyww, poryyyyww, usingproducts, droptype, complete, updatedate, milestoneid ",
+              "from [v_ipg_carbon_milestone] ",
+              "where 1=1 ",
+              "and devorg = 'IPG' ",
+              "and [Visible] = 'Yes'",
+              "and  ((trendyyyyww is not null and  trendyyyyww  <> '') or (poryyyyww is not null and  poryyyyww  <> ''))",
+              "and drop <> 'IP Concept (IC)'",
+              "union all",
+              "select distinct configuration, ipconfigurationid, drop, revision, trendyyyyww, poryyyyww, usingproducts, droptype, complete, updatedate, milestoneid ",
+              "from [v_ipg_carbon_milestone] ",
+              "where 1=1 ",
+              "and devorg = 'IPG' ",
+              "and [Visible] = 'Yes'",
+              "and  ((trendyyyyww is not null and  trendyyyyww  <> '') or (poryyyyww is not null and  poryyyyww  <> ''))",
+              "and drop = 'IP Concept (IC)' ",
+              "and ipconfigurationid NOT IN (select distinct ipconfigurationid",
+              "from [v_ipg_carbon_milestone] ",
+              "where 1=1 ",
+              "and devorg = 'IPG' ",
+              "and [Visible] = 'Yes'",
+              "and  ((trendyyyyww is not null and  trendyyyyww  <> '') or (poryyyyww is not null and  poryyyyww  <> ''))",
+              "and drop = 'IP Concept Refresh (ICR)' )</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "CSDL_SDE_Project",
+        "columns": [
+          {
+            "name": "CSDL_SDE_Project.ApplicationName",
+            "dataType": "string",
+            "sourceColumn": "CSDL_SDE_Project.ApplicationName"
+          },
+          {
+            "name": "CSDL_SDE_Project.MetS0Ratio",
+            "dataType": "string",
+            "sourceColumn": "CSDL_SDE_Project.MetS0Ratio"
+          },
+          {
+            "name": "CSDL_SDE_Project.METS1Ratio",
+            "dataType": "string",
+            "sourceColumn": "CSDL_SDE_Project.METS1Ratio"
+          },
+          {
+            "name": "CSDL_SDE_Project.METS2Ratio",
+            "dataType": "string",
+            "sourceColumn": "CSDL_SDE_Project.METS2Ratio"
+          },
+          {
+            "name": "CSDL_SDE_Project.METS3Ratio",
+            "dataType": "string",
+            "sourceColumn": "CSDL_SDE_Project.METS3Ratio"
+          },
+          {
+            "name": "CSDL_SDE_Project.METS4Ratio",
+            "dataType": "string",
+            "sourceColumn": "CSDL_SDE_Project.METS4Ratio"
+          },
+          {
+            "name": "CSDL_SDE_Project.METS5Ratio",
+            "dataType": "string",
+            "sourceColumn": "CSDL_SDE_Project.METS5Ratio"
+          },
+          {
+            "name": "CSDL_SDE_Project.ProjectName",
+            "dataType": "string",
+            "sourceColumn": "CSDL_SDE_Project.ProjectName"
+          },
+          {
+            "name": "CSDL_SDE_Project.ProjectType",
+            "dataType": "string",
+            "sourceColumn": "CSDL_SDE_Project.ProjectType"
+          },
+          {
+            "name": "CSDL_SDE_Project.SDLePortalURL",
+            "dataType": "string",
+            "sourceColumn": "CSDL_SDE_Project.SDLePortalURL"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"AnalysisServices/SDLIntegrated_hs intel com;SDLIntegrated\",",
+                "    Model1 = Source{[Id=\"Model\"]}[Data],",
+                "    Model2 = Model1{[Id=\"Model\"]}[Data],",
+                "    #\"Added Items\" = Cube.Transform(Model2,",
+                "        {",
+                "            {Cube.AddAndExpandDimensionColumn, \"[CSDL_SDE_Project]\", {\"[CSDL_SDE_Project].[ApplicationName].[ApplicationName]\", \"[CSDL_SDE_Project].[MetS0Ratio].[MetS0Ratio]\", \"[CSDL_SDE_Project].[METS1Ratio].[METS1Ratio]\", \"[CSDL_SDE_Project].[METS2Ratio].[METS2Ratio]\", \"[CSDL_SDE_Project].[METS3Ratio].[METS3Ratio]\", \"[CSDL_SDE_Project].[METS4Ratio].[METS4Ratio]\", \"[CSDL_SDE_Project].[METS5Ratio].[METS5Ratio]\", \"[CSDL_SDE_Project].[ProjectName].[ProjectName]\", \"[CSDL_SDE_Project].[ProjectType].[ProjectType]\", \"[CSDL_SDE_Project].[SDLePortalURL].[SDLePortalURL]\"}, {\"CSDL_SDE_Project.ApplicationName\", \"CSDL_SDE_Project.MetS0Ratio\", \"CSDL_SDE_Project.METS1Ratio\", \"CSDL_SDE_Project.METS2Ratio\", \"CSDL_SDE_Project.METS3Ratio\", \"CSDL_SDE_Project.METS4Ratio\", \"CSDL_SDE_Project.METS5Ratio\", \"CSDL_SDE_Project.ProjectName\", \"CSDL_SDE_Project.ProjectType\", \"CSDL_SDE_Project.SDLePortalURL\"}}",
+                "        })",
+                "in",
+                "    #\"Added Items\""
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "QueryIPData",
+        "columns": [
+          {
+            "name": "IpConfigurationId",
+            "dataType": "string",
+            "sourceColumn": "IpConfigurationId",
+            "sourceProviderType": "BigInt"
+          },
+          {
+            "name": "Configuration",
+            "dataType": "string",
+            "sourceColumn": "Configuration",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "old_IpFamily",
+            "dataType": "string",
+            "sourceColumn": "old_IpFamily",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "IpFamilyId",
+            "dataType": "int64",
+            "sourceColumn": "IpFamilyId",
+            "sourceProviderType": "BigInt"
+          },
+          {
+            "name": "IpGeneration",
+            "dataType": "string",
+            "sourceColumn": "IpGeneration",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "IpType",
+            "dataType": "string",
+            "sourceColumn": "IpType",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "IpFamily",
+            "dataType": "string",
+            "sourceColumn": "IpFamily",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "type": "calculated",
+            "name": "Contacts",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "RELATED(Contact_Information[config_gen_fam.Product_Owner_Name])&\"|\"",
+              "&Related(Contact_Information[config_gen_fam.IP_Execution_Lead_Name])&\"|\"",
+              "&Related(Contact_Information[config_gen_fam.Support_Lead_Name])&\"|\"",
+              "&Related(Contact_Information[config_gen_fam.GM_Name])&\"|\"",
+              "&Related(Contact_Information[config_gen_fam.IPvalidation_Architect_Name])&\"|\"",
+              "&\"None\"&\"|\"",
+              "&\"None\"&\"|\"",
+              "&\"None\"&\"|\"",
+              "&Related(Contact_Information[config_gen_fam.Architecture_Lead_Name])&\"|\""
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "ipsections",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "var config = QueryIPData[IpConfigurationId]",
+              "",
+              "return",
+              "CONCATENATEX(Filter(V_IPG_CARBON_NESTED_IP, V_IPG_CARBON_NESTED_IP[ConfigID]=config), V_IPG_CARBON_NESTED_IP[ipsections] , \"~\")"
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Milestones",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "var config = QueryIPData[Configuration]",
+              "",
+              "return",
+              "CONCATENATEX(Filter(QueryMilestonesNew, QueryMilestonesNew[configuration]=config ), QueryMilestonesNew[MilestoneOverview], \"~\")"
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "QueryIPData",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "select distinct",
+                " a.[IpConfigurationId],a.[Name] as[Configuration],a.[IpFamily] as [old_IpFamily],a.[IpFamilyId],a.[IpGeneration],a.[IpType], b.[Family] as [IpFamily]",
+                "from  [V_IPG_CARBON_IPCONFIGURATION] a",
+                "left join [v_ipg_contacts] b",
+                "on a.ipfamily = b.old_family",
+                "where [Org] ='IPG' ",
+                "and [IpType] != 'services'"
+              ],
+              "dataSource": "IBI"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select distinct",
+                  " a.[IpConfigurationId],a.[Name] as[Configuration],a.[IpFamily] as [old_IpFamily],a.[IpFamilyId],a.[IpGeneration],a.[IpType], b.[Family] as [IpFamily]",
+                  "from  [V_IPG_CARBON_IPCONFIGURATION] a",
+                  "left join [v_ipg_contacts] b",
+                  "on a.ipfamily = b.old_family",
+                  "where [Org] ='IPG' ",
+                  "and [IpType] != 'services'</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "select distinct",
+              " a.[IpConfigurationId],a.[Name] as[Configuration],a.[IpFamily] as [old_IpFamily],a.[IpFamilyId],a.[IpGeneration],a.[IpType], b.[Family] as [IpFamily]",
+              "from  [V_IPG_CARBON_IPCONFIGURATION] a",
+              "left join [v_ipg_contacts] b",
+              "on a.ipfamily = b.old_family",
+              "where [Org] ='IPG' ",
+              "and [IpType] != 'services'"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "QueryIPData"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select distinct",
+              " a.[IpConfigurationId],a.[Name] as[Configuration],a.[IpFamily] as [old_IpFamily],a.[IpFamilyId],a.[IpGeneration],a.[IpType], b.[Family] as [IpFamily]",
+              "from  [V_IPG_CARBON_IPCONFIGURATION] a",
+              "left join [v_ipg_contacts] b",
+              "on a.ipfamily = b.old_family",
+              "where [Org] ='IPG' ",
+              "and [IpType] != 'services'</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "QueryIPSoCMapping",
+        "columns": [
+          {
+            "name": "DieName",
+            "dataType": "string",
+            "sourceColumn": "DieName",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "configuration",
+            "dataType": "string",
+            "sourceColumn": "configuration",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "type": "calculated",
+            "name": "UniqueKey",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "[DieName] & \"_\" & [configuration]"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "QueryIPSoCMapping",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "select distinct DieName, configuration ",
+                "from [ipg_soc_related_ips_and_milestones] ",
+                "where configuration is not null and configuration <> ''"
+              ],
+              "dataSource": "IBI"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select distinct DieName, configuration ",
+                  "from [ipg_soc_related_ips_and_milestones] ",
+                  "where configuration is not null and configuration <> ''</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "select distinct DieName, configuration ",
+              "from [ipg_soc_related_ips_and_milestones] ",
+              "where configuration is not null and configuration <> ''"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "QueryIPSoCMapping"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select distinct DieName, configuration ",
+              "from [ipg_soc_related_ips_and_milestones] ",
+              "where configuration is not null and configuration <> ''</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "a6c91277-09f8-4e7b-958f-9410994d79fb",
+        "fromTable": "V_IPG_CARBON_NESTED_IP",
+        "fromColumn": "Owner",
+        "toTable": "QueryWorkerNames",
+        "toColumn": "User_Idsid"
+      },
+      {
+        "name": "f22b295a-e363-44f5-b39f-4bb35e71a1ff",
+        "fromTable": "AppData",
+        "fromColumn": "SoC Die",
+        "toTable": "QuerySoCContacts",
+        "toColumn": "Soc"
+      },
+      {
+        "name": "dcf67766-5f75-46fd-9ea1-53f2b1ab8e22",
+        "fromTable": "QuerySoCPlatform",
+        "fromColumn": "soc_data.SecondLvlPlatformConfigNm",
+        "toTable": "QueryConfigPlatformName",
+        "toColumn": "platform_name"
+      },
+      {
+        "name": "2ab89a42-70b2-4eea-bb78-f14f9070d7c2",
+        "fromTable": "ipg_feature_new",
+        "fromColumn": "UniqueKey",
+        "toTable": "AppData",
+        "toColumn": "UniqueKey"
+      },
+      {
+        "name": "3ca411ad-e172-4b65-8dc9-85bb4a5622ef",
+        "fromTable": "AppData",
+        "fromColumn": "Configuration",
+        "toTable": "QueryIPData",
+        "toColumn": "Configuration"
+      },
+      {
+        "name": "d6a3b72d-39d6-4700-9f9d-be5003286c64",
+        "fromCardinality": "one",
+        "fromTable": "QueryIPData",
+        "fromColumn": "Configuration",
+        "toTable": "Contact_Information",
+        "toColumn": "configuration",
+        "crossFilteringBehavior": "bothDirections"
+      }
+    ],
+    "roles": [
+      {
+        "name": "IPG_Developers",
+        "modelPermission": "administrator",
+        "members": [
+          {
+            "memberName": "AMR\\IPG_Dashboard_Developers",
+            "memberId": "S-1-5-21-725345543-602162358-527237240-4603422"
+          }
+        ]
+      },
+      {
+        "name": "IPG_InternalUsers",
+        "modelPermission": "read",
+        "members": [
+          {
+            "memberName": "AMR\\IPG_Dashboard_SuperUsers",
+            "memberId": "S-1-5-21-725345543-602162358-527237240-4603439"
+          }
+        ]
+      },
+      {
+        "name": "IPG_ExternalUsers",
+        "modelPermission": "read",
+        "members": [
+          {
+            "memberName": "AMR\\IPG_Dashboard_Users",
+            "memberId": "S-1-5-21-725345543-602162358-527237240-4603440"
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "600"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}
